@@ -36,27 +36,27 @@ export const PromptInputArea = ({
 
   const suggestionPrompts = [
     {
-      icon: <TicketsPlane className="text-green-600 size-4" />,
+      icon: <TicketsPlane className="text-foreground size-4" />,
       value: 'Create a new trip',
     },
     {
-      icon: <LightbulbIcon className="text-cyan-600 size-4" />,
+      icon: <LightbulbIcon className="text-foreground size-4" />,
       value: 'Get inspired',
     },
     {
-      icon: <SparklesIcon className="text-indigo-600 size-4" />,
+      icon: <SparklesIcon className="text-foreground size-4" />,
       value: 'Inspire me where to go',
     },
     {
-      icon: <BikeIcon className="text-yellow-600 size-4" />,
+      icon: <BikeIcon className="text-foreground size-4" />,
       value: 'Solo trip',
     },
     {
-      icon: <WineIcon className="text-pink-600 size-4" />,
+      icon: <WineIcon className="text-foreground size-4" />,
       value: 'Partner',
     },
     {
-      icon: <BabyIcon className="text-pink-500 size-4" />,
+      icon: <BabyIcon className="text-foreground size-4" />,
       value: 'Family',
     },
   ];
@@ -91,7 +91,7 @@ export const PromptInputArea = ({
     <div className={cn("flex flex-col gap-4 w-full", className)}>
       <div className="w-full rounded-xl bg-card relative overflow-hidden">
         <div className="relative rounded-xl">
-          <ShineBorder duration={4} style={{opacity: 0.8}} shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+          <ShineBorder duration={4} style={{opacity: 0.8}} shineColor={["#808080", "#A0A0A0", "#C0C0C0"]} />
           <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}

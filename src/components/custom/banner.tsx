@@ -5,10 +5,8 @@ import { TicketPercent, XIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
-// Define the sale end date - eg: new Date('2024-12-31T23:59:59');
-const saleEndDate = new Date(
-  Date.now() + 9 * 60 * 60 * 1000 + 45 * 60 * 1000 + 24 * 1000
-) // Setting 9h 45m 24s from now for demo purposes
+// Define the launch date - October 31st, 2025
+const launchDate = new Date('2025-10-31T00:00:00')
 
 interface TimeLeft {
   days: number
@@ -31,7 +29,7 @@ export const Banner = () => {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date()
-      const difference = saleEndDate.getTime() - now.getTime()
+      const difference = launchDate.getTime() - now.getTime()
 
       if (difference <= 0) {
         setTimeLeft({
@@ -81,10 +79,9 @@ export const Banner = () => {
           </div>
           <div className="flex grow flex-col justify-between gap-3 md:flex-row md:items-center">
             <div className="space-y-0.5">
-              <p className="text-sm font-medium">Black Friday Sale!</p>
+              <p className="text-sm font-medium">InTown is currently in demo mode</p>
               <p className="text-muted-foreground text-sm">
-                It kicks off today and is available for just 24
-                hours—don&lsquo;t miss out!
+                Full app launching October 31st—join the waitlist!
               </p>
             </div>
             <div className="flex gap-3 max-md:flex-wrap">
@@ -109,8 +106,12 @@ export const Banner = () => {
                 </span>
               </div>
 
-              <Button  size="sm" className="text-sm" >
-                Get Started
+              <Button 
+                size="sm" 
+                className="text-sm" 
+                onClick={() => window.open('https://intown.guide', '_blank')}
+              >
+                Join Waitlist
               </Button>
 
               

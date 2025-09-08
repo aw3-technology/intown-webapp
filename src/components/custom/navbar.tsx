@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
               '/'
             )}`}
           >
-            <img src={HomeIcon} alt="Home" className="w-5 h-5" />
+            <img src={HomeIcon} alt="Home" className="w-5 h-5 grayscale" />
           </Link>
 
           {/* Explore */}
@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
               '/explore'
             )}`}
           >
-            <TreePalm className="w-5 h-5 text-amber-500" />
+            <TreePalm className="w-5 h-5 text-foreground" />
           </Link>
 
           {/* My Trips */}
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
               '/my-trips'
             )}`}
           >
-            <img src={TripIcon} alt="Trip" className="w-5 h-5" />
+            <img src={TripIcon} alt="Trip" className="w-5 h-5 grayscale" />
           </Link>
 
           {/* Saved */}
@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
               '/saved'
             )}`}
           >
-            <img src={HeartIcon} alt="Saved" className="w-5 h-5" />
+            <img src={HeartIcon} alt="Saved" className="w-5 h-5 grayscale" />
           </Link>
         </div>
         {/* Profile */}
@@ -87,7 +87,7 @@ export const Navbar: React.FC = () => {
               <Avatar className="rounded-full w-11 h-11">
                 <AvatarImage src="/images/avatar-content.jpg" />
               </Avatar>
-              <span className="border-background absolute -end-0.5 -top-0.5 size-3 rounded-full border-2 bg-emerald-500">
+              <span className="border-background absolute -end-0.5 -top-0.5 size-3 rounded-full border-2 bg-gray-500">
                 <span className="sr-only">Online</span>
               </span>
             </Button>

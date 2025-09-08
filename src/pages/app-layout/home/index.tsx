@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from 'react';
 import { PromptInputArea } from '@/components/custom/prompt-input-area';
-import PixiProLogo from '/pixipro-logo.svg?inline';
+import InTownLogo from '/intown-circle.svg?inline';
 import { useChat } from '@/hooks/use-chat';
 import {
   ChatContainer,
@@ -55,18 +55,18 @@ export const Home = () => {
         <>
           <BlurFade delay={0.25} inView>
             <img
-              src={PixiProLogo}
-              alt="Pixi Pro Logo"
+              src={InTownLogo}
+              alt="InTown Logo"
               className="w-[104px] -mb-6 object-cover antialiased"
             />
           </BlurFade>
           <div className="flex flex-col w-full items-center gap-2 pt-4 pb-7 text-center">
             <TextAnimate animation="blurInUp" delay={0.5} by="character" once as="h1" className='leading-8 font-normal'>
-              Ready to explore the world?
+              Ready to explore Los Angeles?
             </TextAnimate>
 
             <TextAnimate animation="blurIn" delay={0.8} as="p" className='leading-6'>
-              Let's plan your dream trip! ✨
+              Your personalized concierge has the keys to the city! ✨
             </TextAnimate>
             
           </div>

@@ -25,6 +25,7 @@ import { Terms } from '@/pages/settings-layout/terms';
 import { PrivacyPolicy } from '@/pages/settings-layout/privacy-policy';
 import { NotFound } from '@/pages/app-layout/not-found';
 import { Banner } from '@/components/custom/banner';
+import Styleguide from '@/pages/Styleguide';
 
 export const Routes = () => {
   return (
@@ -54,6 +55,7 @@ export const Routes = () => {
         <Route path="/explore" element={<Explore />} />
         <Route path="/my-trips" element={<MyTrips />} />
         <Route path="/saved" element={<Saved />} />
+        <Route path="/styleguide" element={<Styleguide />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       <Route
