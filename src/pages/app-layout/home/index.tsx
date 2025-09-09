@@ -44,9 +44,36 @@ export const Home = () => {
         content: message.trim(),
         files: files,
       };
-      setTimeout(() => {
-        addMessage(userMessage);
-      }, 500);
+      
+      // Count how many user messages exist before adding this one
+      const userMessageCount = messages.filter(m => m.role === 'user').length;
+      
+      addMessage(userMessage);
+      
+      // Only scroll to top for second+ prompts
+      if (userMessageCount >= 1) {
+        setTimeout(() => {
+          if (containerRef.current) {
+            const container = containerRef.current;
+            const messageElements = container.querySelectorAll('[data-message-index]');
+            const lastMessage = messageElements[messageElements.length - 1];
+            
+            if (lastMessage) {
+              // Get the last message position relative to container
+              const messageRect = lastMessage.getBoundingClientRect();
+              const containerRect = container.getBoundingClientRect();
+              
+              // Calculate scroll position to put message at top of container (with 20px padding)
+              const scrollTarget = container.scrollTop + (messageRect.top - containerRect.top) - 20;
+              
+              container.scrollTo({
+                top: scrollTarget,
+                behavior: 'smooth'
+              });
+            }
+          }
+        }, 100);
+      }
     }
   };
 

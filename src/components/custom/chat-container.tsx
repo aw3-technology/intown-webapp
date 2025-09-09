@@ -307,8 +307,9 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
       messages.forEach((msg, index) => {
         if (msg.role === 'user' && !newActiveMessages.includes(index)) {
           newActiveMessages.push(index);
-          // Scroll when a new user message is added (only if auto-scroll is enabled)
+          
           if (enableAutoScroll) {
+            // Original auto-scroll behavior
             requestAnimationFrame(() => {
               if (containerRef.current && autoScrollEnabled) {
                 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -344,12 +345,17 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
     }
   }, [messages]);
 
+  // Only add padding after the first user message (when there are 2+ messages)
+  const shouldAddPadding = messages.filter(m => m.role === 'user').length > 1;
+  
   return (
     <div
       ref={containerRef}
       className={cn(
-        `flex flex-col ${messages?.length > 0 ? 'h-full' : ''} gap-7 w-full`
+        `flex flex-col ${messages?.length > 0 ? 'h-full' : ''} gap-7 w-full`,
+        `min-h-full` // Ensure container can expand beyond viewport
       )}
+      style={{ paddingBottom: shouldAddPadding ? '75vh' : '0' }} // Add padding only for 2nd+ prompts
     >
       {/* Display messages */}
       {messages.map((message, index) => {
@@ -364,6 +370,7 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
           <div
             key={index}
             ref={index === messages.length - 1 ? lastMessageRef : null}
+            data-message-index={index}
             className={cn(
               'flex w-full',
               message.role === 'user' ? 'justify-end' : 'justify-start'
