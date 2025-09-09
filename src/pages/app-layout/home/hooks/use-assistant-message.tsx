@@ -67,7 +67,7 @@ export const useAssistantMessages = () => {
       id: 1,
       role: 'assistant',
       content:
-        "Got it! Here's your 6-day Barcelona adventure for three – packed with hiking, biking, and hidden gems, all budget-smart. Let's dive in:",
+        "Perfect! Here's your 5-day Los Angeles adventure for two – featuring Hollywood glamour, beach vibes, and stunning views. Let's explore LA:",
     },
     {
       id: 2,
@@ -75,7 +75,7 @@ export const useAssistantMessages = () => {
       content: (
         <div className="flex flex-col gap-2">
           <h1 className='text-foreground/80'>
-              Ready to explore the Los Angeles?
+              Ready to explore Los Angeles?
           </h1>
         </div>
       ),
@@ -88,14 +88,14 @@ export const useAssistantMessages = () => {
             <div className="grid grid-cols-4 gap-1 md:gap-2 w-full rounded-2xl overflow-hidden">
               <div className="col-span-3 md:col-span-2 rounded-l-lg relative max-h-[360px]">
                 
-                <PhotoView src="/images/barcelona-cityscape-large.jpg">
-                  <div className="absolute inset-0 bg-[url('/images/barcelona-cityscape.jpg')] bg-cover bg-center backdrop-blur-xl cursor-pointer hover:opacity-80 transition-opacity duration-300"></div>
+                <PhotoView src="/images/los-angeles-skyline.png">
+                  <div className="absolute inset-0 bg-[url('/images/los-angeles-skyline.png')] bg-cover bg-center backdrop-blur-xl cursor-pointer hover:opacity-80 transition-opacity duration-300"></div>
                 </PhotoView>
                 <div className="absolute flex rounded-l-lg items-center justify-center bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/32 via-white/2 to-transparent backdrop-blur-[1px]">
                   <div className="flex absolute max-w-[206px] px-4 bottom-4 sm:bottom-8 items-center justify-center gap-2 flex-col">
                     
                     <h1 className="relative font-second text-2xl sm:text-5xl leading-11 tracking-tight text-white shadow-xl">
-                      BARCELONA
+                      LOS ANGELES
                     </h1>
                     <div className="flex h-[31px] items-center justify-center bg-layout/50 px-4 py-2 rounded-full gap-2 backdrop-blur-[18px]">
                       <Calendar1Icon
@@ -103,13 +103,13 @@ export const useAssistantMessages = () => {
                         className="text-white font-semibold"
                       />
                       <span className="text-xs font-semibold text-white">
-                        May 11
+                        Mar 15
                       </span>
                       <span className="text-xs font-semibold text-white">
                         →
                       </span>
                       <span className="text-xs font-semibold text-white">
-                        May 17
+                        Mar 20
                       </span>
                     </div>
                   </div>
@@ -117,40 +117,40 @@ export const useAssistantMessages = () => {
               </div>
               <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-1 md:gap-2 max-h-[360px]">
                 <div className="h-full w-full">
-                  <PhotoView src="/images/barcelona-arch-large.jpg">
+                  <PhotoView src="/images/los-angeles-hollywood.png">
                       <img
-                        src="/images/barcelona-arch.jpg"
-                        alt="Barcelona Arch"
+                        src="/images/los-angeles-hollywood.png"
+                        alt="Hollywood Sign"
                         className="object-cover h-full w-full cursor-pointer hover:opacity-80 transition-opacity duration-300"
                       />
                   </PhotoView>
                 </div>
 
                 <div className="h-full w-full">
-                  <PhotoView src="/images/barcelona-beach-large.jpg">
+                  <PhotoView src="/images/los-angeles-venice-canal.png">
                       <img
-                        src="/images/barcelona-beach.jpg"
-                        alt="Barcelona Beach"
+                        src="/images/los-angeles-venice-canal.png"
+                        alt="Venice Beach"
                         className="object-cover h-full w-full cursor-pointer hover:opacity-80 transition-opacity duration-300"
                       />
                   </PhotoView>
                 </div>
 
                 <div className="h-full w-full">
-                  <PhotoView src="/images/barcelona-fountain-large.jpg">
+                  <PhotoView src="/images/los-angeles-griffith-observatory.png">
                     <img
-                      src="/images/barcelona-fountain.jpg"
-                      alt="Barcelona Fountain"
+                      src="/images/los-angeles-griffith-observatory.png"
+                      alt="Griffith Observatory"
                       className="object-cover h-full w-full cursor-pointer hover:opacity-80 transition-opacity duration-300"
                     />
                   </PhotoView>
                   
                 </div>
                 <div className="h-full w-full overflow-hidden relative">
-                  <PhotoView src="/images/barcelona-park-large.jpg">
+                  <PhotoView src="/images/los-angeles-paramount-pictures.png">
                     <img
-                      src="/images/barcelona-park.jpg"
-                      alt="Park Güell"
+                      src="/images/los-angeles-paramount-pictures.png"
+                      alt="Paramount Pictures"
                       className="object-cover h-full w-full cursor-pointer hover:opacity-80 transition-opacity duration-300"
                     />
                   </PhotoView>

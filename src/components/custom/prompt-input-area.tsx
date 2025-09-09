@@ -30,7 +30,7 @@ export const PromptInputArea = ({
 }: PromptInputAreaProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const [input, setInput] = useState("Plan a 6-day adventure trip to Barcelona for 3 friends in October. Include hiking in Montserrat, a bike tour of the city, and a day for exploring Gothic Quarter. Budget-friendly options preferred.");
+  const [input, setInput] = useState("Plan a 5-day trip to Los Angeles, California for 2 people in March. Include visits to Hollywood, Santa Monica Beach, and Griffith Observatory. Looking for a mix of entertainment and outdoor activities.");
   const [files, setFiles] = useState<File[]>([]);
   const uploadInputRef = useRef<HTMLInputElement>(null);
 
@@ -176,7 +176,7 @@ export const PromptInputArea = ({
           {suggestionPrompts.map((prompt) => (
             <Button
               variant="outline"
-              className="border-2 border-input gap-2 px-5 font-normal cursor-pointer text-neutral-500"
+              className="border border-input gap-2 px-5 font-normal cursor-pointer text-neutral-500"
               key={prompt.value}
               onClick={() => setInput(prompt.value)}
             >
