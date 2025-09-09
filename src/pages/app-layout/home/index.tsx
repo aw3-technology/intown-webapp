@@ -151,7 +151,7 @@ export const Home = () => {
                     size="icon"
                     className="rounded-full shadow-lg bg-background border border-border hover:bg-accent"
                   >
-                    <ArrowDown className="h-4 w-4" />
+                    <ArrowDown className="h-4 w-4 opacity-70" />
                   </Button>
                 </div>
               )}
