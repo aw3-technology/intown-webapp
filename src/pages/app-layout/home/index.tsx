@@ -148,7 +148,7 @@ export const Home = () => {
             />
           </BlurFade>
           <div className="flex flex-col w-full items-center gap-2 pt-4 pb-7 text-center">
-            <TextAnimate animation="blurInUp" delay={0.5} by="character" once as="h1" className='leading-8 font-custom text-4xl'>
+            <TextAnimate animation="blurInUp" delay={0.5} by="character" once as="h1" className='leading-8 font-custom text-3xl'>
               Ready to explore Los Angeles?
             </TextAnimate>
           </div>
