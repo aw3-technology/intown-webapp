@@ -139,7 +139,7 @@ export const Home = () => {
     <div className="flex flex-col w-full h-svh relative">
       {messages?.length <= 0 ? (
         // Initial centered view
-        <div className="flex flex-col w-full h-full items-center gap-7 justify-center pb-24 lg:pb-4">
+        <div className="flex flex-col w-full h-full items-center gap-7 justify-center pb-4 lg:pb-4">
           <BlurFade delay={0.25} inView>
             <img
               src={InTownLogo}
@@ -170,7 +170,7 @@ export const Home = () => {
               <ChatContainer messages={messages} containerRef={containerRef} enableAutoScroll={false} />
             </div>
           </div>
-          <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">
+          <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-4 lg:pb-4">
             <div className="max-w-[752px] mx-auto w-full relative">
               {showScrollButton && (
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-10 opacity-70">

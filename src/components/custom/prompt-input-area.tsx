@@ -9,6 +9,11 @@ import {
   TicketsPlane,
   WineIcon,
   X,
+  MoreVertical,
+  Home,
+  Compass,
+  Calendar,
+  Heart,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
@@ -16,6 +21,13 @@ import { useRef, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 import { cn } from '@/lib/utils';
 import { ShineBorder } from "@/components/magicui/shine-border";
+import { useLocation, useNavigate } from 'react-router';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
 
 interface PromptInputAreaProps {
   showSuggestions?: boolean;
@@ -29,6 +41,9 @@ export const PromptInputArea = ({
   onSubmit,
 }: PromptInputAreaProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
 
   const [input, setInput] = useState("Plan a 5-day trip to Los Angeles, California for 2 people in March.");
   const [files, setFiles] = useState<File[]>([]);
@@ -130,6 +145,65 @@ export const PromptInputArea = ({
                   <p className="text-xs">Attach files</p>
                 </TooltipContent>
               </Tooltip>
+
+              {/* Navigation menu button - only visible on mobile when on home page */}
+              {isHomePage && (
+                <div className="lg:hidden">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8 border border-input rounded-2xl hover:bg-card-foreground/10"
+                      >
+                        <MoreVertical className="size-3" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent 
+                      align="start" 
+                      side="top" 
+                      className="bg-card backdrop-blur-sm rounded-xl w-[200px] shadow-lg border-none"
+                    >
+                      <DropdownMenuItem 
+                        className="p-0 transition-all overflow-hidden rounded-lg"
+                        onClick={() => navigate('/')}
+                      >
+                        <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
+                          <Home className="w-4 h-4" />
+                          Home
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem 
+                        className="p-0 transition-all overflow-hidden rounded-lg"
+                        onClick={() => navigate('/explore')}
+                      >
+                        <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
+                          <Compass className="w-4 h-4" />
+                          Explore
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem 
+                        className="p-0 transition-all overflow-hidden rounded-lg"
+                        onClick={() => navigate('/my-bookings')}
+                      >
+                        <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
+                          <Calendar className="w-4 h-4" />
+                          My Bookings
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem 
+                        className="p-0 transition-all overflow-hidden rounded-lg"
+                        onClick={() => navigate('/saved')}
+                      >
+                        <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
+                          <Heart className="w-4 h-4" />
+                          Saved
+                        </span>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              )}
 
               {files.length > 0 && (
                 <div className="flex flex-wrap gap-2">
