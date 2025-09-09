@@ -6,10 +6,10 @@ import TripIcon from '/icons/trip.svg?inline';
 import {
   BookOpen,
   CircleHelp,
+  Compass,
   LogOut,
   MessageSquareText,
   Settings,
-  TreePalm,
   UserPlus,
 } from 'lucide-react';
 import {
@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
               '/explore'
             )}`}
           >
-            <TreePalm className="w-5 h-5 text-foreground" />
+            <Compass className="w-5 h-5 text-neutral-500" />
           </Link>
 
           {/* My Trips */}
