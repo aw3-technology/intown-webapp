@@ -136,7 +136,8 @@ export const Home = () => {
         <>
           <div
             ref={containerRef}
-            className="flex-1 overflow-y-auto px-4 pt-4 pb-4"
+            className="flex-1 overflow-y-auto px-4 pt-4 pb-4 overscroll-contain"
+            style={{ WebkitOverflowScrolling: 'auto' }}
           >
             <div className="max-w-[752px] mx-auto w-full">
               <ChatContainer messages={messages} containerRef={containerRef} enableAutoScroll={false} />
