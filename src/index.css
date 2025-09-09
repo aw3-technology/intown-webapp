@@ -270,39 +270,6 @@
     text-rendering: optimizeLegibility;
   }
 
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    will-change: background-position;
-    animation: shine 4s linear infinite;
-    background-image: radial-gradient(
-      transparent,
-      transparent,
-      rgb(220 220 220 / 0.1),
-      rgb(255 255 255 / 0.05),
-      rgb(185 185 185 / 0.1),
-      transparent,
-      transparent
-    );
-    background-size: 300%;
-    opacity: 0.3;
-    z-index: 0;
-  }
-
-  .dark body::before {
-    background-image: radial-gradient(
-      transparent,
-      transparent,
-      rgb(100 100 100 / 0.08),
-      rgb(150 150 150 / 0.04),
-      rgb(80 80 80 / 0.08),
-      transparent,
-      transparent
-    );
-    opacity: 0.3;
-  }
 
   button{
     cursor: pointer;
