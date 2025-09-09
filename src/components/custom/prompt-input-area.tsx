@@ -14,6 +14,7 @@ import {
   Compass,
   Calendar,
   Heart,
+  Mic,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
@@ -230,18 +231,39 @@ export const PromptInputArea = ({
                 </div>
               )}
             </div>
-            <Button
-              size="icon"
-              className="rounded-full size-8 cursor-pointer"
-              onClick={handleSubmit}
-              type="submit"
-            >
-              {isLoading ? (
-                <Loader className="w-[7px] h-[7px] animate-[spin_4s_linear_infinite]" />
-              ) : (
-                <ArrowUp className="w-[7px] h-[7px]" />
-              )}
-            </Button>
+            <div className="flex items-center gap-2">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="rounded-full size-8 cursor-pointer hover:bg-card-foreground/10"
+                    onClick={() => {
+                      // Voice input functionality will be implemented here
+                      console.log('Voice input clicked');
+                    }}
+                    type="button"
+                  >
+                    <Mic className="w-4 h-4" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent showArrow>
+                  <p className="text-xs">Voice input</p>
+                </TooltipContent>
+              </Tooltip>
+              <Button
+                size="icon"
+                className="rounded-full size-8 cursor-pointer"
+                onClick={handleSubmit}
+                type="submit"
+              >
+                {isLoading ? (
+                  <Loader className="w-[7px] h-[7px] animate-[spin_4s_linear_infinite]" />
+                ) : (
+                  <ArrowUp className="w-[7px] h-[7px]" />
+                )}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
