@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+/* Custom OTF Font */
+@font-face {
+  font-family: 'GlamourLuxury';
+  src: url('/fonts/glamourluxury-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -80,6 +89,7 @@
   --icon-stroke: 1.2000000476837158px;
   --ring-width: 1px;
   --second-font-family: 'Inria Serif', serif;
+  --custom-font-family: 'GlamourLuxury', sans-serif;
   --sidebar: hsl(0 0% 98%);
   --sidebar-foreground: hsl(0 0% 20%);
   --sidebar-primary: hsl(0 0% 0%);
@@ -164,6 +174,7 @@
   --icon-stroke: 1.2px;
   --ring-width: 1px;
   --second-font-family: 'Inria Serif', serif;
+  --custom-font-family: 'GlamourLuxury', sans-serif;
   --sidebar: rgba(10, 10, 10, 1);
   --sidebar-foreground: rgba(200, 200, 200, 1);
   --sidebar-primary: rgba(255, 255, 255, 1);
@@ -288,6 +299,10 @@
 
   .font-second {
     font-family: var(--second-font-family);
+  }
+
+  .font-custom {
+    font-family: var(--custom-font-family);
   }
 
   ::-webkit-scrollbar {
