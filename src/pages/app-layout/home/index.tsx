@@ -61,21 +61,52 @@ export const Home = () => {
     }
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (containerRef.current) {
-        const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
-        const isAtBottom = scrollHeight - scrollTop - clientHeight < 100;
-        setShowScrollButton(!isAtBottom);
-      }
-    };
+  const checkScrollButton = useCallback(() => {
+    if (containerRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
+      const hasOverflow = scrollHeight > clientHeight;
+      const isAtBottom = scrollHeight - scrollTop - clientHeight < 100;
+      setShowScrollButton(hasOverflow && !isAtBottom);
+    }
+  }, []);
 
+  useEffect(() => {
+    // Check initially and on scroll
+    checkScrollButton();
+    
     const container = containerRef.current;
     if (container) {
-      container.addEventListener('scroll', handleScroll);
-      return () => container.removeEventListener('scroll', handleScroll);
+      container.addEventListener('scroll', checkScrollButton);
+      
+      // Also check when content changes
+      const resizeObserver = new ResizeObserver(checkScrollButton);
+      resizeObserver.observe(container);
+      
+      // Watch for DOM changes in the chat container
+      const mutationObserver = new MutationObserver(checkScrollButton);
+      mutationObserver.observe(container, {
+        childList: true,
+        subtree: true,
+        characterData: true
+      });
+      
+      return () => {
+        container.removeEventListener('scroll', checkScrollButton);
+        resizeObserver.disconnect();
+        mutationObserver.disconnect();
+      };
     }
-  }, [messages.length]);
+  }, [messages.length, checkScrollButton]);
+
+  // Check after messages update and DOM renders
+  useEffect(() => {
+    // Use setTimeout to ensure DOM has updated
+    const timer = setTimeout(() => {
+      checkScrollButton();
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [messages, checkScrollButton]);
 
   return (
     <div className="flex flex-col w-full h-svh relative">
@@ -105,25 +136,25 @@ export const Home = () => {
         <>
           <div
             ref={containerRef}
-            className="flex-1 overflow-y-auto px-4 pt-4 pb-4 relative"
+            className="flex-1 overflow-y-auto px-4 pt-4 pb-4"
           >
             <div className="max-w-[752px] mx-auto w-full">
               <ChatContainer messages={messages} containerRef={containerRef} enableAutoScroll={false} />
             </div>
-            {showScrollButton && (
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pb-6">
-                <Button
-                  onClick={scrollToBottom}
-                  size="icon"
-                  className="rounded-full shadow-lg bg-background border border-border hover:bg-accent"
-                >
-                  <ArrowDown className="h-4 w-4" />
-                </Button>
-              </div>
-            )}
           </div>
           <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">
-            <div className="max-w-[752px] mx-auto w-full">
+            <div className="max-w-[752px] mx-auto w-full relative">
+              {showScrollButton && (
+                <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-10">
+                  <Button
+                    onClick={scrollToBottom}
+                    size="icon"
+                    className="rounded-full shadow-lg bg-background border border-border hover:bg-accent"
+                  >
+                    <ArrowDown className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
               <PromptInputArea
                 onSubmit={handleSubmit}
                 showSuggestions={false}
