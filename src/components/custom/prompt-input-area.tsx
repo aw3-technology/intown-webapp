@@ -30,7 +30,7 @@ export const PromptInputArea = ({
 }: PromptInputAreaProps) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const [input, setInput] = useState("Plan a 5-day trip to Los Angeles, California for 2 people in March. Include visits to Hollywood, Santa Monica Beach, and Griffith Observatory. Looking for a mix of entertainment and outdoor activities.");
+  const [input, setInput] = useState("Plan a 5-day trip to Los Angeles, California for 2 people in March.");
   const [files, setFiles] = useState<File[]>([]);
   const uploadInputRef = useRef<HTMLInputElement>(null);
 
