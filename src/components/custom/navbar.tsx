@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, useLocation } from 'react-router';
 import HomeIcon from '/icons/home.svg?inline';
 import HeartIcon from '/icons/heart.svg?inline';
-import TripIcon from '/icons/trip.svg?inline';
 import {
   BookOpen,
+  Calendar,
   CircleHelp,
   Compass,
   LogOut,
@@ -60,14 +60,14 @@ export const Navbar: React.FC = () => {
             <Compass className={`w-5 h-5 ${location.pathname === '/explore' ? 'text-white' : 'text-neutral-500'}`} />
           </Link>
 
-          {/* My Trips */}
+          {/* My Bookings */}
           <Link
-            to="/my-trips"
+            to="/my-bookings"
             className={`hover:bg-card active:bg-card transition-colors rounded-full p-3 ${isActive(
-              '/my-trips'
+              '/my-bookings'
             )}`}
           >
-            <img src={TripIcon} alt="Trip" className={`w-5 h-5 ${location.pathname === '/my-trips' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
+            <Calendar className={`w-5 h-5 ${location.pathname === '/my-bookings' ? 'text-white' : 'text-neutral-500'}`} />
           </Link>
 
           {/* Saved */}

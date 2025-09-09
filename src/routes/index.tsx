@@ -8,7 +8,7 @@ import { Route, Routes as ReactRoutes, Outlet } from 'react-router';
 import { Home } from '@/pages/app-layout/home';
 import { ChatProvider } from '@/providers/chat-provider';
 import { Explore } from '@/pages/app-layout/explore';
-import { MyTrips } from '@/pages/app-layout/my-trips';
+import { MyBookings } from '@/pages/app-layout/my-bookings';
 import { Saved } from '@/pages/app-layout/saved';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { Profile } from '@/pages/settings-layout/profile';
@@ -53,7 +53,7 @@ export const Routes = () => {
       >
         <Route path="/" element={<Home />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/my-trips" element={<MyTrips />} />
+        <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="/saved" element={<Saved />} />
         <Route path="/styleguide" element={<Styleguide />} />
         <Route path="*" element={<NotFound />} />

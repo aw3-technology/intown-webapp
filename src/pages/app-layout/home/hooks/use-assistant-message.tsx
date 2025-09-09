@@ -388,7 +388,7 @@ export const useAssistantMessages = () => {
                           title="Venice Beach"
                           description="1800 Ocean Front Walk, Venice"
                           subText="30 ~ 45 mins"
-                          image="/images/explore-image-3.jpg"
+                          image="/images/los-angeles-venice-canal.png"
                           iconSymbol="🏖️"
                           className="w-full"
                         />
@@ -396,7 +396,7 @@ export const useAssistantMessages = () => {
                           title="Street Tacos"
                           description="Grand Central Market"
                           subText="$8 ~ 12"
-                          image="/images/explore-image-4.jpg"
+                          image="/images/los-angeles-tacos.png"
                           iconSymbol="🌮"
                           className="w-full"
                         />
@@ -428,7 +428,7 @@ export const useAssistantMessages = () => {
                             </div>
                           }
                           subText="15 ~ 20 mins"
-                          image="/images/explore-image-5.jpg"
+                          image="/images/los-angeles-hollywood-blvd.png"
                           iconSymbol="📷"
                           className="w-full"
                         />
@@ -436,7 +436,7 @@ export const useAssistantMessages = () => {
                           title="Korean BBQ"
                           description="Koreatown"
                           subText="$25 ~ 35"
-                          image="/images/explore-image-6.jpg"
+                          image="/images/los-angeles-korean-bbq.png"
                           iconSymbol="🦐"
                           className="w-full"
                         />
