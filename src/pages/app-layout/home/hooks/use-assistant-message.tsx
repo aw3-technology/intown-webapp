@@ -66,15 +66,18 @@ export const useAssistantMessages = () => {
     {
       id: 1,
       role: 'assistant',
-      content:
-        "Perfect! Here's your 5-day Los Angeles adventure for two – featuring Hollywood glamour, beach vibes, and stunning views. Let's explore LA:",
+      content: (
+        <p style={{ fontFamily: 'Georgia, serif' }}>
+          Perfect! Here's your 5-day Los Angeles adventure for two – featuring Hollywood glamour, beach vibes, and stunning views. Let's explore LA:
+        </p>
+      ),
     },
     {
       id: 2,
       role: 'assistant',
       content: (
         <div className="flex flex-col gap-2">
-          <h1 className='text-foreground/80'>
+          <h1 className='text-foreground/80' style={{ fontFamily: 'Georgia, serif' }}>
               Ready to explore Los Angeles?
           </h1>
         </div>

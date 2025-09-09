@@ -122,7 +122,7 @@ export const PromptInputArea = ({
               backgroundColor: 'transparent',
             }}
             className="flex field-sizing-content max-h-[200px] w-full rounded-xl px-4 py-3 leading-relaxed text-foreground placeholder:text-muted-foreground/70 focus-visible:outline-none [resize:none] shadow-none border-none focus-visible:ring-0"
-            placeholder="Ask anything"
+            placeholder="Ask anything about LA"
             aria-label="Enter your prompt"
           />
           <div className="flex items-center justify-between gap-2 py-2 px-3 backdrop-blur-md bg-white/10 dark:bg-black/10 transition-colors">
