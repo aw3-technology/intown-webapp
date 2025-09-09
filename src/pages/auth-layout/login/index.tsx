@@ -1,4 +1,4 @@
-import LogoSmall from '/pixipro-logo-small.svg?inline';
+import LogoSmall from '/intown-circle.svg?inline';
 import { LoginForm } from './login-form';
 import { Footer } from '@/components/custom/footer';
 export const Login = () => {

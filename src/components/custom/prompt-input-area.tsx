@@ -108,7 +108,7 @@ export const PromptInputArea = ({
             placeholder="Ask me anything about your trip.."
             aria-label="Enter your prompt"
           />
-          <div className="flex items-center justify-between gap-2 py-2 px-3 bg-transparent transition-colors">
+          <div className="flex items-center justify-between gap-2 py-2 px-3 backdrop-blur-md bg-white/10 dark:bg-black/10 transition-colors">
             <div className="flex items-center gap-2">
               <Tooltip>
                 <TooltipTrigger asChild>

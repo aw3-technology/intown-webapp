@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { PasswordResetForm } from './password-reset-form';
-import LogoSmall from '/pixipro-logo-small.svg?inline';
+import LogoSmall from '/intown-circle.svg?inline';
 import { Footer } from '@/components/custom/footer';
 import { ArrowLeftIcon } from 'lucide-react';
 
