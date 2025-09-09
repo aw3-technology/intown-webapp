@@ -170,13 +170,14 @@ export const useAssistantMessages = () => {
       role: 'assistant',
       content: (
         <div className="flex flex-col gap-2">
-          <p className="text-lg text-foreground">Barcelona, Spain</p>
+          <p className="text-lg text-foreground">Los Angeles, California</p>
           <p className="text-foreground/70">
-            Barcelona is a vibrant city known for its stunning architecture,
-            including the iconic Sagrada Familia and Park Güell. Enjoy the
-            lively atmosphere of Las Ramblas, indulge in delicious tapas, and
-            soak up the sun on the beautiful beaches. Don't miss the chance to
-            explore the rich history and culture of this Catalan capital!
+            Los Angeles is a sprawling city famous for Hollywood glamour,
+            stunning beaches, and year-round sunshine. Explore the iconic
+            Hollywood Sign, stroll down the Venice Beach Boardwalk, visit
+            world-class museums, and indulge in diverse culinary experiences.
+            From movie studios to mountain hikes, LA offers endless entertainment
+            in the heart of Southern California!
           </p>
         </div>
       ),
@@ -313,11 +314,11 @@ export const useAssistantMessages = () => {
                     <AccordionContent className="py-2 flex flex-col gap-6">
                       <div className="flex flex-col gap-2 text-foreground/60 leading-5 text-start font-normal">
                         <span>
-                          Your adventure begins as you arrive in Barcelona early
+                          Your adventure begins as you arrive in Los Angeles early
                           in the morning. After checking into your accommodation
                           and freshening up, you'll dive into the city's vibrant
                           culture and iconic landmarks. Today is all about
-                          getting familiar with Barcelona's energy and preparing
+                          getting familiar with LA's energy and preparing
                           for the days ahead.
                         </span>
                         <span>Approx. Total Cost: $52 for 1 person</span>
@@ -329,7 +330,7 @@ export const useAssistantMessages = () => {
                         </div>
                         <div className="flex flex-col gap-2 text-sm font-normal">
                           <span>
-                            🛬 Arrive at Barcelona-El Prat Airport (BCN) at 6:30
+                            🛬 Arrive at Los Angeles International Airport (LAX) at 6:30
                             AM.
                           </span>
                           <span>
@@ -342,7 +343,7 @@ export const useAssistantMessages = () => {
                           </span>
                           <span>
                             🥐 Grab a quick breakfast at a local café (try
-                            "churros con chocolate", €3.10 ~ 4.20).
+                            an acai bowl or avocado toast, $12 ~ 16).
                           </span>
                         </div>
                       </div>
@@ -350,16 +351,16 @@ export const useAssistantMessages = () => {
                         <ExploreCard
                           className="w-full"
                           title="Taxi or Shuttle"
-                          description="BCN - Barcelona-El Prat"
+                          description="LAX - Los Angeles International"
                           subText="20 mins, ~$25"
                           image="/images/explore-image-1.jpg"
                           iconSymbol="🚕"
                         />
                         <ExploreCard
                           className="w-full"
-                          title="Churros con chocolate"
+                          title="Acai bowl or Avocado toast"
                           description="Local café"
-                          subText="€3.10 ~ 4.20"
+                          subText="$12 ~ 16"
                           image="/images/explore-image-2.jpg"
                           iconSymbol="🥐"
                         />
@@ -503,11 +504,11 @@ export const useAssistantMessages = () => {
                     <AccordionContent className="py-2 flex flex-col gap-4">
                     <div className="flex flex-col gap-2 text-foreground/60 leading-5 text-start font-normal">
                         <span>
-                          Your adventure begins as you arrive in Barcelona early
+                          Your adventure begins as you arrive in Los Angeles early
                           in the morning. After checking into your accommodation
                           and freshening up, you'll dive into the city's vibrant
                           culture and iconic landmarks. Today is all about
-                          getting familiar with Barcelona's energy and preparing
+                          getting familiar with LA's energy and preparing
                           for the days ahead.
                         </span>
                         <span>Approx. Total Cost: $52 for 1 person</span>
@@ -519,7 +520,7 @@ export const useAssistantMessages = () => {
                         </div>
                         <div className="flex flex-col gap-2 text-sm font-normal">
                           <span>
-                            🛬 Arrive at Barcelona-El Prat Airport (BCN) at 6:30
+                            🛬 Arrive at Los Angeles International Airport (LAX) at 6:30
                             AM.
                           </span>
                           <span>
@@ -532,7 +533,7 @@ export const useAssistantMessages = () => {
                           </span>
                           <span>
                             🥐 Grab a quick breakfast at a local café (try
-                            "churros con chocolate", €3.10 ~ 4.20).
+                            an acai bowl or avocado toast, $12 ~ 16).
                           </span>
                         </div>
                       </div>
@@ -540,16 +541,16 @@ export const useAssistantMessages = () => {
                         <ExploreCard
                           className="w-full"
                           title="Taxi or Shuttle"
-                          description="BCN - Barcelona-El Prat"
+                          description="LAX - Los Angeles International"
                           subText="20 mins, ~$25"
                           image="/images/explore-image-1.jpg"
                           iconSymbol="🚕"
                         />
                         <ExploreCard
                           className="w-full"
-                          title="Churros con chocolate"
+                          title="Acai bowl or Avocado toast"
                           description="Local café"
-                          subText="€3.10 ~ 4.20"
+                          subText="$12 ~ 16"
                           image="/images/explore-image-2.jpg"
                           iconSymbol="🥐"
                         />

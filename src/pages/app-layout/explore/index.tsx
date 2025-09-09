@@ -47,20 +47,20 @@ export const Explore = () => {
         }
       />
       <ExploreContentCard
-        coverImageUrl="/images/barcelona-cathedral.jpg"
-        coverImageAlt="Barcelona Cathedral"
-        title="Barcelona in 4 Days"
+        coverImageUrl="/images/los-angeles-griffith-observatory.png"
+        coverImageAlt="Griffith Observatory"
+        title="Los Angeles in 5 Days"
         description="By @WanderlustSarah | 1.2K saves"
         tags={[
           {
-            text: '#Barcelona',
+            text: '#LosAngeles',
             bgColor: 'bg-fuchsia-100',
             darkBgColor: 'dark:bg-fuchsia-900',
             textColor: 'text-fuchsia-900',
             darkTextColor: 'dark:text-fuchsia-100',
           },
           {
-            text: '#Tapas',
+            text: '#Hollywood',
             bgColor: 'bg-indigo-100',
             darkBgColor: 'dark:bg-indigo-900',
             textColor: 'text-indigo-900',
@@ -78,7 +78,7 @@ export const Explore = () => {
           <div className="flex items-center gap-2">
             <EarthIcon className="size-4 text-foreground/50" />
             <span className="text-sm text-foreground/50 leading-5 font-normal">
-              Montserrat hike → Gothic Quarter bike tour → Flamenco night
+              Hollywood Walk of Fame → Santa Monica Beach → Griffith Observatory
             </span>
           </div>
         }

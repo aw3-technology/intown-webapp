@@ -28,10 +28,10 @@ export const MyTrips = () => {
         
         <ExploreCard
           className="p-2"
-          title="6-Day Spain and Barcelona Adventure"
-          description="11 May - 17 May 2025 • 2 traveller • 1 room"
-          subText="3 travellers • 2 room"
-          image="/images/barcelona-cathedral.jpg"
+          title="5-Day Los Angeles Adventure"
+          description="15 Mar - 20 Mar 2025 • 2 travellers • 1 room"
+          subText="2 travellers • 1 room"
+          image="/images/los-angeles-hollywood.png"
           iconSymbol="🚕"
           imageSize="large"
           delay={0.1}
