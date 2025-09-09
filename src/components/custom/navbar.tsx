@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
-import HomeIcon from '/icons/home.svg?inline';
-import HeartIcon from '/icons/heart.svg?inline';
 import {
   BookOpen,
   Calendar,
   CircleHelp,
   Compass,
+  Heart,
+  Home,
   LogOut,
   MessageSquareText,
   Settings,
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
               '/'
             )}`}
           >
-            <img src={HomeIcon} alt="Home" className={`w-5 h-5 ${location.pathname === '/' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
+            <Home className={`w-5 h-5 ${location.pathname === '/' ? 'text-white' : 'text-neutral-500'}`} />
           </Link>
 
           {/* Explore */}
@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
               '/saved'
             )}`}
           >
-            <img src={HeartIcon} alt="Saved" className={`w-5 h-5 ${location.pathname === '/saved' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
+            <Heart className={`w-5 h-5 ${location.pathname === '/saved' ? 'text-white' : 'text-neutral-500'}`} />
           </Link>
         </div>
         {/* Profile */}
