@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
               '/'
             )}`}
           >
-            <img src={HomeIcon} alt="Home" className="w-5 h-5 grayscale" />
+            <img src={HomeIcon} alt="Home" className={`w-5 h-5 ${location.pathname === '/' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
           </Link>
 
           {/* Explore */}
@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
               '/explore'
             )}`}
           >
-            <Compass className="w-5 h-5 text-neutral-500" />
+            <Compass className={`w-5 h-5 ${location.pathname === '/explore' ? 'text-white' : 'text-neutral-500'}`} />
           </Link>
 
           {/* My Trips */}
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
               '/my-trips'
             )}`}
           >
-            <img src={TripIcon} alt="Trip" className="w-5 h-5 grayscale" />
+            <img src={TripIcon} alt="Trip" className={`w-5 h-5 ${location.pathname === '/my-trips' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
           </Link>
 
           {/* Saved */}
@@ -77,7 +77,7 @@ export const Navbar: React.FC = () => {
               '/saved'
             )}`}
           >
-            <img src={HeartIcon} alt="Saved" className="w-5 h-5 grayscale" />
+            <img src={HeartIcon} alt="Saved" className={`w-5 h-5 ${location.pathname === '/saved' ? 'brightness-0 invert' : 'grayscale opacity-60'}`} />
           </Link>
         </div>
         {/* Profile */}
