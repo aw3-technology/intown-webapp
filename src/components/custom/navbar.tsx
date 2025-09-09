@@ -87,9 +87,6 @@ export const Navbar: React.FC = () => {
               <Avatar className="rounded-full w-11 h-11">
                 <AvatarImage src="/images/avatar-content.jpg" />
               </Avatar>
-              <span className="border-background absolute -end-0.5 -top-0.5 size-3 rounded-full border-2 bg-gray-500">
-                <span className="sr-only">Online</span>
-              </span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
