@@ -111,13 +111,15 @@ export const Home = () => {
               <ChatContainer messages={messages} containerRef={containerRef} enableAutoScroll={false} />
             </div>
             {showScrollButton && (
-              <Button
-                onClick={scrollToBottom}
-                size="icon"
-                className="fixed bottom-32 right-8 rounded-full shadow-lg bg-background border border-border hover:bg-accent z-50"
-              >
-                <ArrowDown className="h-4 w-4" />
-              </Button>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pb-6">
+                <Button
+                  onClick={scrollToBottom}
+                  size="icon"
+                  className="rounded-full shadow-lg bg-background border border-border hover:bg-accent"
+                >
+                  <ArrowDown className="h-4 w-4" />
+                </Button>
+              </div>
             )}
           </div>
           <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">

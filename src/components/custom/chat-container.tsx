@@ -192,7 +192,7 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
       const assistantMessages = messages.filter(msg => msg.role === 'assistant');
       
       if (messageIndex >= assistantMessages.length) {
-        scrollToBottom("smooth");
+        // Don't auto-scroll when all messages are processed
         return;
       }
       
@@ -246,9 +246,7 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
             // Move to the next message after animation is completed
             setTimeout(() => {
               processMessage(messageIndex + 1);
-              if (enableAutoScroll && !isScrolling && !scrollTriggered && autoScrollEnabled) {
-                scrollToBottom("smooth");
-              }
+              // Don't auto-scroll after typing completes
             }, 500);
           }
         }, 10);
@@ -273,9 +271,7 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
           
           setTimeout(() => {
             processMessage(messageIndex + 1);
-            if (enableAutoScroll && !isScrolling && !scrollTriggered && autoScrollEnabled) {
-              scrollToBottom("smooth");
-            }
+            // Don't auto-scroll after JSX renders
           }, 200);
         }, 100);
       }
