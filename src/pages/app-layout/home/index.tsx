@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { PromptInputArea } from '@/components/custom/prompt-input-area';
 import InTownLogo from '/intown-circle.svg?inline';
 import { useChat } from '@/hooks/use-chat';
@@ -12,10 +12,13 @@ import { AllFlightsDrawer } from './partials/all-flights-drawer';
 import { AllAccomodationDrawer } from './partials/all-accommodation-drawer';
 import { TextAnimate } from "@/components/magicui/text-animate";  
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { Button } from '@/components/ui/button';
+import { ArrowDown } from 'lucide-react';
 
 export const Home = () => {
   const { messages, addMessage, clearMessages } = useChat();
   const assistantMessages = useAssistantMessages();
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     return () => {
@@ -49,6 +52,31 @@ export const Home = () => {
 
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const scrollToBottom = useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        top: containerRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
+        const isAtBottom = scrollHeight - scrollTop - clientHeight < 100;
+        setShowScrollButton(!isAtBottom);
+      }
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, [messages.length]);
+
   return (
     <div className="flex flex-col w-full h-svh relative">
       {messages?.length <= 0 ? (
@@ -77,11 +105,20 @@ export const Home = () => {
         <>
           <div
             ref={containerRef}
-            className="flex-1 overflow-y-auto px-4 pt-4 pb-4"
+            className="flex-1 overflow-y-auto px-4 pt-4 pb-4 relative"
           >
             <div className="max-w-[752px] mx-auto w-full">
-              <ChatContainer messages={messages} containerRef={containerRef} />
+              <ChatContainer messages={messages} containerRef={containerRef} enableAutoScroll={false} />
             </div>
+            {showScrollButton && (
+              <Button
+                onClick={scrollToBottom}
+                size="icon"
+                className="fixed bottom-32 right-8 rounded-full shadow-lg bg-background border border-border hover:bg-accent z-50"
+              >
+                <ArrowDown className="h-4 w-4" />
+              </Button>
+            )}
           </div>
           <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">
             <div className="max-w-[752px] mx-auto w-full">

@@ -13,6 +13,7 @@ export interface Message {
 interface ChatMessagesProps {
   messages: Message[];
   containerRef: React.RefObject<HTMLDivElement | null>;
+  enableAutoScroll?: boolean;
 }
 
 // Helper function to render JSX elements
@@ -161,7 +162,7 @@ const useAutoScroll = (
   };
 };
 
-export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => {
+export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true }: ChatMessagesProps) => {
   const [typingTexts, setTypingTexts] = useState<string[]>([]);
   const [visibleJSX, setVisibleJSX] = useState<boolean[]>([]);
   const [activeMessages, setActiveMessages] = useState<number[]>([]);
@@ -175,14 +176,14 @@ export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => 
     isScrolling,
     scrollTriggered,
     prevChildrenCountRef,
-  } = useAutoScroll(containerRef, true);
+  } = useAutoScroll(containerRef, enableAutoScroll);
 
   useEffect(() => {
-    if (messages.length > prevChildrenCountRef.current) {
+    if (enableAutoScroll && messages.length > prevChildrenCountRef.current) {
       scrollToBottom("smooth");
     }
     prevChildrenCountRef.current = messages.length;
-  }, [messages, scrollToBottom]);
+  }, [messages, scrollToBottom, enableAutoScroll]);
 
   // Runs when component mounts or messages change
   useEffect(() => {
@@ -227,12 +228,15 @@ export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => 
             });
             currentCharIndex++;
 
-            requestAnimationFrame(() => {
-              if (containerRef.current && autoScrollEnabled) {
-                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-                scrollToBottom(isIOS ? 'auto' : 'smooth');
-              }
-            });
+            // Don't auto-scroll during typing if enableAutoScroll is false
+            if (enableAutoScroll) {
+              requestAnimationFrame(() => {
+                if (containerRef.current && autoScrollEnabled) {
+                  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                  scrollToBottom(isIOS ? 'auto' : 'smooth');
+                }
+              });
+            }
           } else {
             clearInterval(intervalId);
             
@@ -242,7 +246,7 @@ export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => 
             // Move to the next message after animation is completed
             setTimeout(() => {
               processMessage(messageIndex + 1);
-              if (!isScrolling && !scrollTriggered && autoScrollEnabled) {
+              if (enableAutoScroll && !isScrolling && !scrollTriggered && autoScrollEnabled) {
                 scrollToBottom("smooth");
               }
             }, 500);
@@ -269,7 +273,7 @@ export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => 
           
           setTimeout(() => {
             processMessage(messageIndex + 1);
-            if (!isScrolling && !scrollTriggered && autoScrollEnabled) {
+            if (enableAutoScroll && !isScrolling && !scrollTriggered && autoScrollEnabled) {
               scrollToBottom("smooth");
             }
           }, 200);
@@ -307,13 +311,15 @@ export const ChatContainer = ({ messages, containerRef }: ChatMessagesProps) => 
       messages.forEach((msg, index) => {
         if (msg.role === 'user' && !newActiveMessages.includes(index)) {
           newActiveMessages.push(index);
-          // Scroll when a new user message is added
-          requestAnimationFrame(() => {
-            if (containerRef.current && autoScrollEnabled) {
-              const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-              scrollToBottom(isIOS ? 'auto' : 'smooth');
-            }
-          });
+          // Scroll when a new user message is added (only if auto-scroll is enabled)
+          if (enableAutoScroll) {
+            requestAnimationFrame(() => {
+              if (containerRef.current && autoScrollEnabled) {
+                const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                scrollToBottom(isIOS ? 'auto' : 'smooth');
+              }
+            });
+          }
         }
       });
       return newActiveMessages;
