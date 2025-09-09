@@ -50,9 +50,10 @@ export const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="flex flex-col w-full min-h-svh items-center gap-7 justify-center pb-24 lg:pb-4">
-      {messages?.length <= 0 && (
-        <>
+    <div className="flex flex-col w-full h-svh relative">
+      {messages?.length <= 0 ? (
+        // Initial centered view
+        <div className="flex flex-col w-full h-full items-center gap-7 justify-center pb-24 lg:pb-4">
           <BlurFade delay={0.25} inView>
             <img
               src={InTownLogo}
@@ -64,35 +65,35 @@ export const Home = () => {
             <TextAnimate animation="blurInUp" delay={0.5} by="character" once as="h1" className='leading-8 font-normal'>
               Ready to explore Los Angeles?
             </TextAnimate>
-
-           {/* <TextAnimate animation="blurIn" delay={0.8} as="p" className='leading-6'>
-              Your personalized concierge has the keys to the city.
-            </TextAnimate> */}
-            
           </div>
-
-          {/* <div className="flex flex-col w-full max-w-[752px] gap-2 pt-4 pb-7 text-center">
-            
-          </div> */}
+          <PromptInputArea
+            onSubmit={handleSubmit}
+            showSuggestions={true}
+            className="max-w-[752px] w-full px-2"
+          />
+        </div>
+      ) : (
+        // Chat view with messages at top and input at bottom
+        <>
+          <div
+            ref={containerRef}
+            className="flex-1 overflow-y-auto px-4 pt-4 pb-4"
+          >
+            <div className="max-w-[752px] mx-auto w-full">
+              <ChatContainer messages={messages} containerRef={containerRef} />
+            </div>
+          </div>
+          <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">
+            <div className="max-w-[752px] mx-auto w-full">
+              <PromptInputArea
+                onSubmit={handleSubmit}
+                showSuggestions={false}
+                className="w-full"
+              />
+            </div>
+          </div>
         </>
       )}
-
-      {messages?.length > 0 && (
-        <div
-          ref={containerRef}
-          className="w-full h-full overflow-y-auto flex justify-center"
-        >
-          <div className="max-w-[752px] w-full px-4">
-            <ChatContainer messages={messages} containerRef={containerRef} />
-          </div>
-        </div>
-      )}
-
-      <PromptInputArea
-        onSubmit={handleSubmit}
-        showSuggestions={messages?.length <= 0}
-        className="max-w-[752px] w-full px-2"
-      />
       <AllFlightsDrawer />
       <AllAccomodationDrawer />
     </div>
