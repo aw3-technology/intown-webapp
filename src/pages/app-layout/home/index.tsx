@@ -145,13 +145,13 @@ export const Home = () => {
           <div className="sticky bottom-0 bg-layout border-t border-border/50 px-4 py-4 pb-24 lg:pb-4">
             <div className="max-w-[752px] mx-auto w-full relative">
               {showScrollButton && (
-                <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-10">
+                <div className="absolute -top-16 left-1/2 -translate-x-1/2 z-10 opacity-70">
                   <Button
                     onClick={scrollToBottom}
                     size="icon"
                     className="rounded-full shadow-lg bg-background border border-border hover:bg-accent"
                   >
-                    <ArrowDown className="h-4 w-4 opacity-70" />
+                    <ArrowDown className="h-4 w-4" />
                   </Button>
                 </div>
               )}
