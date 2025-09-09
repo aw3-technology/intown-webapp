@@ -65,9 +65,9 @@ export const Home = () => {
               Ready to explore Los Angeles?
             </TextAnimate>
 
-            <TextAnimate animation="blurIn" delay={0.8} as="p" className='leading-6'>
+           {/* <TextAnimate animation="blurIn" delay={0.8} as="p" className='leading-6'>
               Your personalized concierge has the keys to the city.
-            </TextAnimate>
+            </TextAnimate> */}
             
           </div>
 

@@ -75,12 +75,8 @@ export const useAssistantMessages = () => {
       content: (
         <div className="flex flex-col gap-2">
           <h1 className='text-foreground/80'>
-              Ready to explore the world?
+              Ready to explore the Los Angeles?
           </h1>
-
-          <p className='text-foreground/60'>
-              Let's plan your dream trip! ✨
-          </p>
         </div>
       ),
     },
