@@ -46,7 +46,7 @@ export const PromptInputArea = ({
   const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
 
-  const [input, setInput] = useState("Plan a 5-day trip to Los Angeles, California for 2 people in March.");
+  const [input, setInput] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const uploadInputRef = useRef<HTMLInputElement>(null);
 
@@ -80,12 +80,13 @@ export const PromptInputArea = ({
   const handleSubmit = async () => {
     if (input.trim() || files.length > 0) {
       setIsLoading(true);
-      await onSubmit(input.trim(), files);
+      const messageToSend = input.trim();
+      setInput(''); // Clear input immediately after capturing the value
+      setFiles([]);
+      await onSubmit(messageToSend, files);
       setTimeout(() => {
         setIsLoading(false);
       }, 1000);
-      setInput('');
-      setFiles([]);
     }
   };
 
@@ -121,7 +122,7 @@ export const PromptInputArea = ({
               backgroundColor: 'transparent',
             }}
             className="flex field-sizing-content max-h-[200px] w-full rounded-xl px-4 py-3 leading-relaxed text-foreground placeholder:text-muted-foreground/70 focus-visible:outline-none [resize:none] shadow-none border-none focus-visible:ring-0"
-            placeholder="Ask me anything about your trip.."
+            placeholder="Ask anything"
             aria-label="Enter your prompt"
           />
           <div className="flex items-center justify-between gap-2 py-2 px-3 backdrop-blur-md bg-white/10 dark:bg-black/10 transition-colors">
