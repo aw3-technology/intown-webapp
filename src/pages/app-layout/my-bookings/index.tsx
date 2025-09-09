@@ -43,29 +43,29 @@ export const MyBookings = () => {
           className="p-2"
           title="Hollywood Studio Tour Package"
           description="22 May - 27 May 2025 • 2 travellers • VIP Access"
-          subText="1 traveller • 1 room"
-          image="/images/london-cultural.jpg"
-          iconSymbol="🚕"
+          subText="2 travellers • VIP Access"
+          image="/images/los-angeles-hollywood.png"
+          iconSymbol="🎬"
           imageSize="large"
           delay={0.1}
         />
         <ExploreCard
           className="p-2"
-          title="7-Day NYC Melting Pot Tour"
-          description="4 Feb - 11 Feb 2025 • 2 traveller • 1 room"
-          subText="4 travellers • 2 room"
-          image="/images/nyc-melting.jpg"
-          iconSymbol="🚕"
+          title="Santa Monica Beach Resort Stay"
+          description="4 Feb - 11 Feb 2025 • 4 travellers • 2 rooms"
+          subText="4 travellers • 2 rooms"
+          image="/images/los-angeles-hotel.png"
+          iconSymbol="🏖️"
           imageSize="large"
           delay={0.2}
         />
         <ExploreCard
           className="p-2"
-          title="5-Day Rome & Vatican Discovery"
-          description="1 Apr - 5 Apr 2025 • 2 traveller • 1 room"
-          subText="1 traveller • 1 room"
-          image="/images/rome-vatican.jpg"
-          iconSymbol="🚕"
+          title="Beverly Hills Luxury Experience"
+          description="1 Apr - 5 Apr 2025 • 2 travellers • Suite"
+          subText="2 travellers • Suite"
+          image="/images/los-angeles-restaurant.png"
+          iconSymbol="🥂"
           imageSize="large"
           delay={0.3}
         />
@@ -74,11 +74,11 @@ export const MyBookings = () => {
         <TextAnimate animation="blurInUp" delay={0.3} duration={0.1} by="character" once as="span" className='text-foreground/60 leading-5'>Previous 30 days</TextAnimate>
         <ExploreCard
           className="p-2"
-          title="7-Day Australia’s East Coast: Sydney & Beyond"
-          description="16 May - 22 May 2025 • 2 traveller • 1 room"
-          subText="1 traveller • 1 room"
-          image="/images/sydney.jpg"
-          iconSymbol="🚕"
+          title="Griffith Observatory & Downtown LA Tour"
+          description="16 May - 22 May 2025 • 2 travellers • Private Guide"
+          subText="2 travellers • Private Guide"
+          image="/images/los-angeles-griffith-observatory.png"
+          iconSymbol="🔭"
           imageSize="large"
           delay={0.4}
         />
