@@ -373,31 +373,31 @@ export const useAssistantMessages = () => {
                         </div>
                         <div className="flex flex-col gap-2 text-sm font-normal">
                           <span>
-                            ⛪ Explore the Gothic Quarter: Wander through narrow
-                            medieval streets, visit Barcelona Cathedral, and
-                            shop for souvenirs.
+                            🏖️ Explore Venice Beach: Walk along the boardwalk,
+                            watch street performers, and browse unique shops
+                            and vendors.
                           </span>
                           <span>
-                            🍲 Lunch at La Boqueria Market: Try local tapas like
-                            patatas bravas and jamón ibérico.
+                            🌮 Lunch at Grand Central Market: Try authentic tacos,
+                            pupusas, and fresh California cuisine.
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-col md:flex-row gap-3">
                         <ExploreCard
-                          title="Barcelona Cathedral"
-                          description="Pla de la Seu, s/n, Ciutat Vella"
+                          title="Venice Beach"
+                          description="1800 Ocean Front Walk, Venice"
                           subText="30 ~ 45 mins"
                           image="/images/explore-image-3.jpg"
-                          iconSymbol="⛪"
+                          iconSymbol="🏖️"
                           className="w-full"
                         />
                         <ExploreCard
-                          title="Patatas bravas"
-                          description="Mercat de la Boqueria"
-                          subText="€3 ~ 4.20"
+                          title="Street Tacos"
+                          description="Grand Central Market"
+                          subText="$8 ~ 12"
                           image="/images/explore-image-4.jpg"
-                          iconSymbol="🍟"
+                          iconSymbol="🌮"
                           className="w-full"
                         />
                       </div>
@@ -409,18 +409,18 @@ export const useAssistantMessages = () => {
                         </div>
                         <div className="flex flex-col gap-2 text-sm font-normal">
                           <span>
-                            📷 Stroll along La Rambla and enjoy street
-                            performances.
+                            📷 Walk down Hollywood Boulevard and see the
+                            Walk of Fame.
                           </span>
                           <span>
-                            🦐 Dinner at a local restaurant: Try paella or
-                            fideuà (seafood noodle dish).
+                            🍔 Dinner at a local restaurant: Try In-N-Out Burger or
+                            Korean BBQ in Koreatown.
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-col md:flex-row gap-3">
                         <ExploreCard
-                          title="La Rambla"
+                          title="Hollywood Boulevard"
                           description={
                             <div className="flex gap-1 items-center cursor-pointer">
                               <span>Location</span>
@@ -433,9 +433,9 @@ export const useAssistantMessages = () => {
                           className="w-full"
                         />
                         <ExploreCard
-                          title="Paella or Fideuà"
-                          description="Mercat de la Boqueria"
-                          subText="€2.5 ~ 3.25"
+                          title="Korean BBQ"
+                          description="Koreatown"
+                          subText="$25 ~ 35"
                           image="/images/explore-image-6.jpg"
                           iconSymbol="🦐"
                           className="w-full"
@@ -499,7 +499,7 @@ export const useAssistantMessages = () => {
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="py-0 border-b- text-foreground text-base font-medium leading-5">
-                      Park Güell and Gothic Quarter
+                      Griffith Observatory and Downtown LA
                     </AccordionTrigger>
                     <AccordionContent className="py-2 flex flex-col gap-4">
                     <div className="flex flex-col gap-2 text-foreground/60 leading-5 text-start font-normal">
@@ -580,7 +580,7 @@ export const useAssistantMessages = () => {
                 <Accordion type="single" collapsible>
                   <AccordionItem value="item-1">
                     <AccordionTrigger className="py-0 text-foreground text-base font-medium leading-5">
-                      Gaudí and Gothic Architecture
+                      Beach Day and Santa Monica
                     </AccordionTrigger>
                     <AccordionContent>
                       <></>
@@ -601,7 +601,7 @@ export const useAssistantMessages = () => {
           <div className="flex gap-3 px-4 items-center h-11">
             <LightbulbIcon className="size-4  text-yellow-400" />
             <p className="text-foreground/70 text-base font-medium leading-5">
-              Culture Adapter in Barcelona
+              Culture Adapter in Los Angeles
             </p>
           </div>
           <div className="flex flex-col gap-1 bg-card-inner w-full h-full rounded-xl p-4">
@@ -611,7 +611,7 @@ export const useAssistantMessages = () => {
                  Tipping Etiquette 💰
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 text-sm text-start ps-8 font-normal">
-                Tipping isn’t required in Barcelona, but it’s a kind gesture. At restaurants, rounding up or leaving 5–10% is common. For example, if the bill is €18, leaving €20 is appreciated. 💶
+                Tipping is expected in Los Angeles. At restaurants, 18-20% is standard for good service. For example, if the bill is $50, leaving $60 is appreciated. Always tip bartenders, taxi drivers, and service staff. 💵
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -619,7 +619,7 @@ export const useAssistantMessages = () => {
                    Dining Customs 🍽️
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 text-sm text-start ps-8 font-normal">
-                 Mealtimes in Barcelona are later than in many countries—lunch is around 2–4 PM and dinner often starts after 9 PM. Tapas are small shared plates common in bars and restaurants. The “menú del día” (daily set menu) is a popular and affordable lunch option. Water is usually paid—ask for “agua con gas” (sparkling) or “sin gas” (still). 🍷
+                 LA dining is casual and diverse. Brunch is huge on weekends (10 AM-2 PM). Food trucks are everywhere and offer amazing meals. Dietary restrictions are well-accommodated—vegan, gluten-free options are common. Happy hour (3-6 PM) offers great deals on drinks and appetizers. Water and refills are free at restaurants. 🥑
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
@@ -627,7 +627,7 @@ export const useAssistantMessages = () => {
                  Public Behavior 🚶
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 text-sm text-start ps-8 font-normal">
-                Locals value patience and courtesy in public spaces. Queuing is respected, especially on public transport. Speaking quietly in shared areas (like trains or cafés) is expected. Always clean up after yourself—littering is frowned upon. 🧍‍♂️
+                LA is laid-back but car-centric. Personal space is valued—keep distance in lines. Jaywalking is illegal and enforced. Being on time is important for business, but social events often run late. Recycling is taken seriously—use the right bins. 🚗
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
@@ -635,10 +635,10 @@ export const useAssistantMessages = () => {
                  Language Tips 🗣️
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/70 text-sm text-start ps-8 font-normal">
-                Both Spanish (Castellano) and Catalan are official languages in Barcelona. Using basic phrases in either is appreciated.
+                English is the primary language in Los Angeles, but Spanish is widely spoken. Being friendly and casual is the LA way.
                      <ul className="list-disc list-inside mt-2">
                       <li>Spanish: “hola” (hello), “gracias” (thank you), “por favor” (please)</li>
-                      <li>Catalan: “bon dia” (good morning), “merci” (thanks), “si us plau” (please)</li>
+                      <li>Common greetings: "Hey" or "What's up?" are very casual and common</li>
                       <li>Even a simple greeting can go a long way.</li>
                      </ul>
                 </AccordionContent>
@@ -657,7 +657,7 @@ export const useAssistantMessages = () => {
             <InfoIcon className="size-4 text-foreground/70" />
             <span className="text-foreground/60 text-xs leading-4 text-start">
               Understanding these cultural nuances will help you blend in, show
-              respect, and make the most of your Barcelona adventure.
+              respect, and make the most of your Los Angeles adventure.
             </span>
           </div>
         </div>

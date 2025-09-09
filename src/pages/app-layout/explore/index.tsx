@@ -130,27 +130,27 @@ export const Explore = () => {
           </Select>
         </div>
         <ExploreContentCard
-          coverImageUrl="/images/kyoto.jpg"
-          coverImageAlt="kyoto"
-          title="Kyoto in 5 Days"
-          description="By @ZenTraveler | 2.4K saves"
+          coverImageUrl="/images/los-angeles-hollywood.png"
+          coverImageAlt="Hollywood"
+          title="Hollywood & Beverly Hills Tour"
+          description="By @LAExplorer | 2.4K saves"
           tags={[
             {
-              text: '#Temples',
+              text: '#Hollywood',
               bgColor: 'bg-emerald-100',
               darkBgColor: 'dark:bg-emerald-900',
               textColor: 'text-emerald-900',
               darkTextColor: 'dark:text-emerald-100',
             },
             {
-              text: '#CherryBlossoms',
+              text: '#Celebrity',
               bgColor: 'bg-indigo-100',
               darkBgColor: 'dark:bg-indigo-900',
               textColor: 'text-indigo-900',
               darkTextColor: 'dark:text-indigo-100',
             },
             {
-              text: '#Cultural',
+              text: '#Shopping',
               bgColor: 'bg-lime-100',
               darkBgColor: 'dark:bg-lime-900',
               textColor: 'text-lime-900',
@@ -161,34 +161,33 @@ export const Explore = () => {
             <div className="flex items-start gap-2">
               <EarthIcon className="size-4 text-foreground/50" />
               <span className="text-sm text-foreground/50 leading-5 font-normal">
-                Fushimi Inari sunrise → Bamboo Forest → Tea ceremony → Gion
-                night walk
+                Hollywood Sign hike → Rodeo Drive → Warner Bros Studio → Sunset Strip
               </span>
             </div>
           }
         />
         <ExploreContentCard
-          coverImageUrl="/images/zanzibar.jpg"
-          coverImageAlt="zanzibar"
-          title="Safari & Zanzibar Combo"
-          description="By @WildlifeChase | 892 saves"
+          coverImageUrl="/images/los-angeles-venice-canal.png"
+          coverImageAlt="Venice Beach"
+          title="Beach Cities & Coastal Drive"
+          description="By @BeachLover | 892 saves"
           tags={[
             {
-              text: '#Luxury',
+              text: '#Beach',
               bgColor: 'bg-lime-100',
               darkBgColor: 'dark:bg-lime-900',
               textColor: 'text-lime-900',
               darkTextColor: 'dark:text-lime-100',
             },
             {
-              text: '#Adventure',
+              text: '#Surfing',
               bgColor: 'bg-violet-100',
               darkBgColor: 'dark:bg-violet-900',
               textColor: 'text-violet-900',
               darkTextColor: 'dark:text-violet-100',
             },
             {
-              text: '#Beach',
+              text: '#Coastal',
               bgColor: 'bg-sky-100',
               darkBgColor: 'dark:bg-sky-900',
               textColor: 'text-sky-900',
@@ -199,17 +198,16 @@ export const Explore = () => {
             <div className="flex items-start gap-2">
               <EarthIcon className="size-4 text-foreground/50" />
               <span className="text-sm text-foreground/50 leading-5 font-normal">
-                Serengeti hot air balloon → Ngorongoro Crater → Stone Town spice
-                tour
+                Venice Beach → Santa Monica Pier → Manhattan Beach → Malibu Coast
               </span>
             </div>
           }
         />
         <ExploreContentCard
-          coverImageUrl="/images/mexico.jpg"
-          coverImageAlt="mexico-city"
-          title="Mexico City Foodie Weekend"
-          description="By @TacoNinja | 1.7K saves"
+          coverImageUrl="/images/los-angeles-food.png"
+          coverImageAlt="LA Food"
+          title="LA Foodie Weekend"
+          description="By @FoodieLA | 1.7K saves"
           tags={[
             {
               text: '#StreetFood',
@@ -219,7 +217,7 @@ export const Explore = () => {
               darkTextColor: 'dark:text-blue-100',
             },
             {
-              text: '#History',
+              text: '#Tacos',
               bgColor: 'bg-purple-100',
               darkBgColor: 'dark:bg-purple-900',
               textColor: 'text-purple-900',
@@ -237,33 +235,33 @@ export const Explore = () => {
               <div className="flex items-start gap-2">
               <EarthIcon className="size-4 text-foreground/50" />
               <span className="text-sm text-foreground/50 leading-5 font-normal">
-                Charles Bridge → Ruin bars → Thermal baths → $5 meal guide
+                Grand Central Market → K-Town BBQ → Taco trucks → Little Tokyo
               </span>
             </div>
           }
         />
         <ExploreContentCard
-          coverImageUrl="/images/budapest.jpg"
-          coverImageAlt="budapest"
-          title="Prague & Budapest Budget Week"
-          description="By @EuroExplorer | 1.5K saves"
+          coverImageUrl="/images/los-angeles-paramount-pictures.png"
+          coverImageAlt="Paramount Pictures"
+          title="Studio Tours & Theme Parks"
+          description="By @ThemeParkPro | 1.5K saves"
           tags={[
             {
-              text: '#Hostels',
+              text: '#Studios',
               bgColor: 'bg-fuchsia-100',
               darkBgColor: 'dark:bg-fuchsia-900',
               textColor: 'text-fuchsia-900',
               darkTextColor: 'dark:text-fuchsia-100',
             },
             {
-              text: '#Architecture',
+              text: '#ThemeParks',
               bgColor: 'bg-sky-100',
               darkBgColor: 'dark:bg-sky-900',
               textColor: 'text-sky-900',
               darkTextColor: 'dark:text-sky-100',
             },
             {
-              text: '#TrainTravel',
+              text: '#Family',
               bgColor: 'bg-blue-100',
               darkBgColor: 'dark:bg-blue-900',
               textColor: 'text-blue-900',
@@ -274,7 +272,7 @@ export const Explore = () => {
             <div className="flex items-start gap-2">
               <EarthIcon className="size-4 text-foreground/50" />
               <span className="text-sm text-foreground/50 leading-5 font-normal">
-                Charles Bridge → Ruin bars → Thermal baths → $5 meal guide
+                Universal Studios → Warner Bros Tour → Disneyland → Six Flags
               </span>
             </div>
           }
@@ -282,27 +280,27 @@ export const Explore = () => {
         {loadMore && (
           <>
             <ExploreContentCard
-              coverImageUrl="/images/kyoto.jpg"
-              coverImageAlt="kyoto"
-              title="Kyoto in 5 Days"
-              description="By @ZenTraveler | 2.4K saves"
+              coverImageUrl="/images/los-angeles-westwood.png"
+              coverImageAlt="Westwood"
+              title="UCLA & Westwood Weekend"
+              description="By @CollegeExplorer | 2.4K saves"
               tags={[
                 {
-                  text: '#Temples',
+                  text: '#Campus',
                   bgColor: 'bg-emerald-100',
                   darkBgColor: 'dark:bg-emerald-900',
                   textColor: 'text-emerald-900',
                   darkTextColor: 'dark:text-emerald-100',
                 },
                 {
-                  text: '#CherryBlossoms',
+                  text: '#Museums',
                   bgColor: 'bg-indigo-100',
                   darkBgColor: 'dark:bg-indigo-900',
                   textColor: 'text-indigo-900',
                   darkTextColor: 'dark:text-indigo-100',
                 },
                 {
-                  text: '#Cultural',
+                  text: '#Shopping',
                   bgColor: 'bg-lime-100',
                   darkBgColor: 'dark:bg-lime-900',
                   textColor: 'text-lime-900',
@@ -313,34 +311,33 @@ export const Explore = () => {
                 <div className="flex items-start gap-2">
                   <EarthIcon className="size-4 text-foreground/50" />
                   <span className="text-sm text-foreground/50 leading-5 font-normal">
-                    Fushimi Inari sunrise → Bamboo Forest → Tea ceremony → Gion
-                    night walk
+                    UCLA Campus → Hammer Museum → Westwood Village → Getty Center
                   </span>
                 </div>
               }
             />
             <ExploreContentCard
-              coverImageUrl="/images/zanzibar.jpg"
-              coverImageAlt="zanzibar"
-              title="Safari & Zanzibar Combo"
-              description="By @WildlifeChase | 892 saves"
+              coverImageUrl="/images/los-angeles-house.png"
+              coverImageAlt="LA Houses"
+              title="Architecture & Celebrity Homes"
+              description="By @ArchitectureLA | 892 saves"
               tags={[
                 {
-                  text: '#Luxury',
+                  text: '#Architecture',
                   bgColor: 'bg-lime-100',
                   darkBgColor: 'dark:bg-lime-900',
                   textColor: 'text-lime-900',
                   darkTextColor: 'dark:text-lime-100',
                 },
                 {
-                  text: '#Adventure',
+                  text: '#CelebHomes',
                   bgColor: 'bg-violet-100',
                   darkBgColor: 'dark:bg-violet-900',
                   textColor: 'text-violet-900',
                   darkTextColor: 'dark:text-violet-100',
                 },
                 {
-                  text: '#Beach',
+                  text: '#Tours',
                   bgColor: 'bg-sky-100',
                   darkBgColor: 'dark:bg-sky-900',
                   textColor: 'text-sky-900',
@@ -351,34 +348,33 @@ export const Explore = () => {
                 <div className="flex items-start gap-2">
                   <EarthIcon className="size-4 text-foreground/50" />
                   <span className="text-sm text-foreground/50 leading-5 font-normal">
-                    Serengeti hot air balloon → Ngorongoro Crater → Stone Town
-                    spice tour
+                    Beverly Hills mansions → Hollywood Hills → Case Study Houses → Bel Air
                   </span>
                 </div>
               }
             />
             <ExploreContentCard
-              coverImageUrl="/images/mexico.jpg"
-              coverImageAlt="mexico-city"
-              title="Mexico City Foodie Weekend"
-              description="By @TacoNinja | 1.7K saves"
+              coverImageUrl="/images/los-angeles-skyline.png"
+              coverImageAlt="Downtown LA"
+              title="Downtown LA Arts District"
+              description="By @ArtsyLA | 1.7K saves"
               tags={[
                 {
-                  text: '#StreetFood',
+                  text: '#Arts',
                   bgColor: 'bg-blue-100',
                   darkBgColor: 'dark:bg-blue-900',
                   textColor: 'text-blue-900',
                   darkTextColor: 'dark:text-blue-100',
                 },
                 {
-                  text: '#History',
+                  text: '#Museums',
                   bgColor: 'bg-purple-100',
                   darkBgColor: 'dark:bg-purple-900',
                   textColor: 'text-purple-900',
                   darkTextColor: 'dark:text-purple-100',
                 },
                 {
-                  text: '#Weekend',
+                  text: '#Urban',
                   bgColor: 'bg-fuchsia-100',
                   darkBgColor: 'dark:bg-fuchsia-900',
                   textColor: 'text-fuchsia-900',
@@ -389,7 +385,7 @@ export const Explore = () => {
                 <div className="flex items-start gap-2">
                   <EarthIcon className="size-4 text-foreground/50" />
                   <span className="text-sm text-foreground/50 leading-5 font-normal">
-                    Charles Bridge → Ruin bars → Thermal baths → $5 meal guide
+                    The Broad → MOCA → Arts District galleries → Little Tokyo
                   </span>
                 </div>
               }

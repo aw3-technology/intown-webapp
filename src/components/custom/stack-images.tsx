@@ -17,15 +17,15 @@ export const StackImages = ({
     <div className={cn('relative w-42 h-32 rounded-2xl shadow-md select-none')}>
       <div className="absolute w-full h-full border-2 shadow-xl shadow-shadow-24 border-foreground-light-solid rounded-2xl overflow-hidden transform -rotate-6 z-20 opacity-50">
         <img
-          src="/images/barcelona-beach.jpg"
-          alt="Barcelona Beach"
+          src="/images/los-angeles-venice-canal.png"
+          alt="Venice Beach"
           className="w-full h-full object-cover"
         />
       </div>
       <div className="absolute w-full h-full border-2 shadow-2xl border-foreground-light-solid rounded-2xl overflow-hidden transform -rotate-3 z-30 opacity-70">
         <img
-          src="/images/barcelona-fountain.jpg"
-          alt="Barcelona Fountain"
+          src="/images/los-angeles-restaurant.png"
+          alt="Los Angeles Restaurant"
           className="w-full h-full object-cover"
         />
       </div>
