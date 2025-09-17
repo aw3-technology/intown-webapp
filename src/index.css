@@ -336,19 +336,22 @@ html, body {
   padding: 0;
 }
 
+/* iOS safe area padding */
+body {
+  padding-top: env(safe-area-inset-top);
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Dark mode specific backgrounds */
 .dark html,
 .dark body {
   background-color: #000000 !important;
 }
 
-body {
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: touch;
-}
-
 #root {
   background: #000000;  /* Dark background for any gaps */
+  padding-top: env(safe-area-inset-top);
 }
 
 /* Dark mode backgrounds */
