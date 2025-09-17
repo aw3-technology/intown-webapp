@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>AI Concierge</title>
     <meta name="description" content="PixiPro Travel Planner is a travel planning assistant that helps you plan your next trip.">
 
@@ -33,6 +33,32 @@
     <style>
       @view-transition {
         navigation: auto;
+      }
+
+      /* Fix iOS bounce scroll white background */
+      html {
+        background-color: #000000;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      body {
+        background-color: #000000;
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Dark mode specific */
+      @media (prefers-color-scheme: dark) {
+        html, body {
+          background-color: #000000;
+        }
+      }
+
+      /* iOS safe area handling */
+      #root {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        min-height: 100vh;
       }
     </style>
   </head>
