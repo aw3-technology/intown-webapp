@@ -17,6 +17,9 @@ interface TimeLeft {
 }
 
 export const Banner = () => {
+  // Banner temporarily disabled
+  return null
+
   const [isVisible, setIsVisible] = useState(true)
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
