@@ -15,6 +15,7 @@ import {
   Calendar,
   Heart,
   Mic,
+  User,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
@@ -193,13 +194,22 @@ export const PromptInputArea = ({
                           My Bookings
                         </span>
                       </DropdownMenuItem>
-                      <DropdownMenuItem 
+                      <DropdownMenuItem
                         className="p-0 transition-all overflow-hidden rounded-lg"
                         onClick={() => navigate('/saved')}
                       >
                         <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
                           <Heart className="w-4 h-4" />
                           Saved
+                        </span>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        className="p-0 transition-all overflow-hidden rounded-lg"
+                        onClick={() => navigate('/profile')}
+                      >
+                        <span className="flex items-center px-3 py-2 gap-3 w-full cursor-pointer">
+                          <User className="w-4 h-4" />
+                          Profile
                         </span>
                       </DropdownMenuItem>
                     </DropdownMenuContent>

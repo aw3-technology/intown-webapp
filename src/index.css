@@ -342,10 +342,12 @@
     padding-bottom: var(--safe-bottom);
   }
 
-  /* For fixed sidebars that need safe area */
-  .sidebar-safe {
-    padding-top: 50px;
-    top: 0 !important;
+  /* For fixed sidebars that need safe area - mobile only */
+  @media (max-width: 1023px) {
+    .sidebar-safe {
+      padding-top: 50px;
+      top: 0 !important;
+    }
   }
 }
 
