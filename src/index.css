@@ -105,6 +105,7 @@
 /* Dark mode color-scheme for proper system UI */
 .dark {
   color-scheme: dark;
+  background-color: #000000;
   --background-elevated: rgba(15, 15, 15, 1);
   --foreground: rgba(240, 240, 240, 1);
   --foreground-light-solid: rgba(255, 255, 255, 1);
@@ -333,7 +334,12 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #0b0b0b;
+}
+
+/* Dark mode specific backgrounds */
+.dark html,
+.dark body {
+  background-color: #000000 !important;
 }
 
 body {
@@ -342,13 +348,13 @@ body {
 }
 
 #root {
-  background: #0b0b0b;  /* Dark background for any gaps */
+  background: #000000;  /* Dark background for any gaps */
 }
 
 /* Dark mode backgrounds */
 @media (prefers-color-scheme: dark) {
   html, body, #root {
-    background: #0b0b0b;
+    background-color: #000000 !important;
   }
 }
 
@@ -356,5 +362,5 @@ body {
 .app {
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
-  background: #0b0b0b;
+  background: #000000;
 }
