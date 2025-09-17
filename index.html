@@ -10,6 +10,10 @@
     <link rel="alternate icon" href="/favicon/favicon.ico?v=2" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=2" />
     <meta name="apple-mobile-web-app-title" content="AI Concierge" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <link rel="manifest" href="/favicon/site.webmanifest" />
 
     <meta property="twitter:card" content="summary_large_image" />
@@ -33,45 +37,6 @@
     <style>
       @view-transition {
         navigation: auto;
-      }
-
-      /* Fix iOS bounce scroll white background */
-      html {
-        background-color: #000000;
-        -webkit-overflow-scrolling: touch;
-        height: 100%;
-        position: fixed;
-        width: 100%;
-      }
-
-      body {
-        background-color: #000000;
-        overscroll-behavior: none;
-        -webkit-tap-highlight-color: transparent;
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        position: fixed;
-      }
-
-      /* Dark mode specific */
-      @media (prefers-color-scheme: dark) {
-        html, body {
-          background-color: #000000;
-        }
-      }
-
-      /* iOS safe area handling and viewport fix */
-      #root {
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
-        height: 100vh;
-        height: -webkit-fill-available;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        position: relative;
       }
     </style>
   </head>

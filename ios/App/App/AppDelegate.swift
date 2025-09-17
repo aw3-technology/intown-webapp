@@ -8,6 +8,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Set window background to black
+        window?.backgroundColor = .black
+
+        // Force dark mode throughout the app
+        window?.overrideUserInterfaceStyle = .dark
+
+        // Set WebView background to black
+        DispatchQueue.main.async {
+            if let rootVC = self.window?.rootViewController as? CAPBridgeViewController {
+                rootVC.view.backgroundColor = .black
+                rootVC.webView?.isOpaque = false
+                rootVC.webView?.backgroundColor = .black
+                rootVC.webView?.scrollView.backgroundColor = .black
+            }
+        }
+
         return true
     }
 
