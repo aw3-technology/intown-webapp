@@ -173,8 +173,6 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
   const {
     autoScrollEnabled,
     scrollToBottom,
-    isScrolling,
-    scrollTriggered,
     prevChildrenCountRef,
   } = useAutoScroll(containerRef, enableAutoScroll);
 
