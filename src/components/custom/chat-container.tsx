@@ -376,7 +376,7 @@ export const ChatContainer = ({ messages, containerRef, enableAutoScroll = true 
           >
             <div
               className={cn(
-                index === 0 && 'mt-6',
+                index === 0 && 'mt-8',
                 message.role === 'user' ? 'sm:w-full md:w-[420px]' : 'w-full',
                 message.role === 'user' ? 'px-4 py-2' : 'px-0 py-0',
                 'rounded-2xl',
