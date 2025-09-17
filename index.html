@@ -39,12 +39,21 @@
       html {
         background-color: #000000;
         -webkit-overflow-scrolling: touch;
+        height: 100%;
+        position: fixed;
+        width: 100%;
       }
 
       body {
         background-color: #000000;
         overscroll-behavior: none;
         -webkit-tap-highlight-color: transparent;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
       }
 
       /* Dark mode specific */
@@ -54,11 +63,15 @@
         }
       }
 
-      /* iOS safe area handling */
+      /* iOS safe area handling and viewport fix */
       #root {
         padding-top: env(safe-area-inset-top);
         padding-bottom: env(safe-area-inset-bottom);
-        min-height: 100vh;
+        height: 100vh;
+        height: -webkit-fill-available;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
       }
     </style>
   </head>
