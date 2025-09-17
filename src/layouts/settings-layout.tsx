@@ -13,7 +13,7 @@ export const SettingsLayout: React.FC<SettingsLayoutProps> = ({ children }) => {
       <div className="fixed top-0 w-full z-50 pt-safe">
         <BackToApp />
       </div>
-      <main className="flex flex-col max-w-[752px] mx-auto w-full px-4 pt-[calc(3.5rem+env(safe-area-inset-top))] pb-14 lg:py-16">
+      <main className="flex flex-col max-w-[752px] mx-auto w-full px-4 py-14 lg:py-16">
         {children}
       </main>
     </div>

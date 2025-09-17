@@ -357,7 +357,6 @@ html, body {
 
 /* iOS safe area padding */
 body {
-  padding-top: var(--safe-top);
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -381,7 +380,5 @@ body {
 
 /* Safe area padding for sticky elements */
 .app {
-  padding-bottom: var(--safe-bottom);
-  padding-top: var(--safe-top);
   background: #000000;
 }
