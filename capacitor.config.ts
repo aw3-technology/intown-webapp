@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.pixipro.travelplanner',
+  appId: 'com.ios.intown',
   appName: 'InTown',
   webDir: 'dist',
   server: {
