@@ -44,8 +44,8 @@ export const Routes = () => {
       <Route
         element={
           <AppLayout>
-            <Banner />
             <ChatProvider>
+              <Banner />
               <Outlet />
             </ChatProvider>
           </AppLayout>

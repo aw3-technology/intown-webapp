@@ -10,7 +10,7 @@ interface AppLayoutProps {
 export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  
+
   return (
     <div className="h-svh w-full">
       <main className="w-full min-h-full">{children}</main>

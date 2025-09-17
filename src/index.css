@@ -329,16 +329,20 @@
   }
 }
 
-/* iOS-specific background fixes for bounce/overscroll */
-html, body, #root {
-  background: #0b0b0b;  /* Dark background for bounce area */
-  height: 100%;
+/* iOS-specific viewport and overflow fixes */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0b0b0b;
 }
 
 body {
-  min-height: 100svh;  /* iOS dynamic viewport */
-  margin: 0;
-  overscroll-behavior: none;  /* Reduces bounce */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  background: #0b0b0b;  /* Dark background for any gaps */
 }
 
 /* Dark mode backgrounds */

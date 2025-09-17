@@ -68,7 +68,7 @@ export const Banner = () => {
   if (!isVisible || timeLeft.isExpired) return null
 
   return (
-    <div className="bg-muted text-foreground px-4 py-3">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-muted text-foreground px-4 py-3">
       <div className="flex gap-2 md:items-center">
         <div className="flex grow gap-3 md:items-center">
           <div
