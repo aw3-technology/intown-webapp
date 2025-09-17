@@ -344,7 +344,7 @@
 
   /* For fixed sidebars that need safe area */
   .sidebar-safe {
-    padding-top: var(--safe-top);
+    padding-top: 20px;
     top: 0 !important;
   }
 }
