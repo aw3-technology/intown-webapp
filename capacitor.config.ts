@@ -5,10 +5,12 @@ const config: CapacitorConfig = {
   appName: 'InTown',
   webDir: 'dist',
   server: {
-    androidScheme: 'https'
+    url: 'https://app.intown.guide',
+    cleartext: false
   },
   ios: {
-    contentInset: 'automatic'
+    contentInset: 'never',
+    backgroundColor: '#000000'
   }
 };
 
