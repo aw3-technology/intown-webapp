@@ -35,7 +35,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   };
 
   return (
-    <Sidebar {...props} className="max-w-[220px] bg-settings-sidebar">
+    <Sidebar {...props} className="max-w-[220px] bg-settings-sidebar sidebar-safe">
       <SidebarHeader className="flex flex-row gap-4 w-full">
         <Button
           variant="ghost"

@@ -18,6 +18,11 @@
 :root {
   color-scheme: dark light;
   --radius: 0.625rem;
+  /* iOS safe area variables */
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+  --safe-left: env(safe-area-inset-left);
+  --safe-right: env(safe-area-inset-right);
   --background-elevated: rgba(255, 255, 255, 1);
   --foreground: rgba(0, 0, 0, 1);
   --foreground-light-solid: rgba(255, 255, 255, 1);
@@ -328,6 +333,20 @@
   .text-2xs {
     font-size: 11px;
   }
+
+  .pt-safe {
+    padding-top: var(--safe-top);
+  }
+
+  .pb-safe {
+    padding-bottom: var(--safe-bottom);
+  }
+
+  /* For fixed sidebars that need safe area */
+  .sidebar-safe {
+    padding-top: var(--safe-top);
+    top: 0 !important;
+  }
 }
 
 /* iOS-specific viewport and overflow fixes */
@@ -338,7 +357,7 @@ html, body {
 
 /* iOS safe area padding */
 body {
-  padding-top: env(safe-area-inset-top);
+  padding-top: var(--safe-top);
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -351,7 +370,6 @@ body {
 
 #root {
   background: #000000;  /* Dark background for any gaps */
-  padding-top: env(safe-area-inset-top);
 }
 
 /* Dark mode backgrounds */
@@ -363,7 +381,7 @@ body {
 
 /* Safe area padding for sticky elements */
 .app {
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-top: env(safe-area-inset-top);
+  padding-bottom: var(--safe-bottom);
+  padding-top: var(--safe-top);
   background: #000000;
 }
